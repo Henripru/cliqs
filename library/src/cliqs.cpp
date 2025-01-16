@@ -53,9 +53,9 @@ void Run(const std::string& appName, const std::vector<Task>& tasks)
         isQuit = (choice == tasks.size());
         if (!isQuit)
         {
-            if (tasks[choice])
+            if (tasks[choice].Task)
             {
-                tasks[choice]();
+                tasks[choice].Task();
             }
         }
     } while(!isQuit);
